@@ -1,0 +1,196 @@
+body {
+    background-image: url("../img/bkg-black.png");
+    color: var(--bs-white);
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+.ref-product {
+    color: white !important;
+}
+
+li {
+    color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: white;
+}
+.nav-link.active:hover{
+    border-radius: 1.078em;
+    background-color: #51B8B1;
+}
+
+.ref-field-variants {
+    background-color: black;
+    color: black;
+}
+
+.modal-header2 {
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.btn.btn-close {
+    color: white !important;
+}
+
+.login-dark {
+    height: 500px;
+    background: #1e2833;
+    background-size: cover;
+    position: relative;
+}
+
+.login-dark form {
+    max-width: 320px;
+    width: 90%;
+    background-color: #1e2833;
+    padding: 40px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-dark .illustration {
+    text-align: center;
+    padding: 15px 0 20px;
+    font-size: 100px;
+    color: #2980ef;
+}
+
+.login-dark form .form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #434a52;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+}
+
+.login-dark form .btn-primary {
+    background: #214a80;
+    border: none;
+    border-radius: 4px;
+    padding: 11px;
+    box-shadow: none;
+    margin-top: 26px;
+    text-shadow: none;
+    outline: none;
+}
+
+.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+    background: #214a80;
+    outline: none;
+}
+
+.login-dark form .forgot {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #6f7a85;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.login-dark form .forgot:hover, .login-dark form .forgot:active {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.login-dark form .btn-primary:active {
+    transform: translateY(1px);
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+}
+
+div.dropdown.btn.selectoption {
+    padding: 4px !important;
+    width: 125px;
+}
+
+.btn {
+    width: 135px;
+    height: 39px;
+}
+
+.btn-secondary {
+    background-color: #1e283300;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #fff;
+    background-color:#51B8B1;
+}
+.card{
+    /*width: 300px;
+    height: 335px;*/
+    background-color: #1e212500;
+}
+.btn-outline-secondary {
+    color: #fff;
+    border-color: #adb5bd;
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    border-color: #51B8B1;
+    background-color:#51B8B1;
+}
+.btn-check:active+.btn-outline-secondary, .btn-check:checked+.btn-outline-secondary, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show, .btn-outline-secondary:active {
+    color: #fff;
+    border-color: #51B8B1;
+    background-color:#51B8B1;
+}
+.product-link{
+    text-decoration: none;
+    color: #fff;
+}
+.product-link:hover{
+    color: #51B8B1;
+}
+.tarjetas {
+    padding: 3vh;
+}
+.mb-3> .imagenUpdate{
+    display: flex;
+    align-items: center;
+}
+.centrado{
+    display: grid;
+    justify-items: center;
+}
+.modal{
+    color: #0F0F0F;
+}
+.form-control{
+    font-size: 0.80rem!important;
+}
+
+.btn-outline-secondary:hover {
+    color: rgb(255, 255, 255) !important;
+    border-color: transparent;
+}
+
+.btn-outline-secondary:active{
+    border-color: #C2DBFE;
+}
+
+.btn-outline-secondary {
+    border: 1px solid #ced4da;
+    color: #6c757d !important;
+    width: 125px;
+}
+
+.table{
+    color: var(--bs-white)!important;
+}
+.logout:hover{
+    background-color: red!important;
+    color: white;
+}
