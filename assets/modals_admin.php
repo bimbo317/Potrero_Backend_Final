@@ -32,23 +32,23 @@
                     <h4>Ingrese los datos de la prenda.</h4>
                     <div class="col-12">
                         <label for="typeClothes" class="form-label">Tipo de prenda</label>
-                        <input type="text" class="form-control" name="typeClothes" id="typeClothes" placeholder="Buzo, Pantalón, Remera, etc">
+                        <input type="text" class="form-control" name="typeClothes" id="typeClothes" placeholder="Buzo, Pantalón, Remera, etc" required>
                     </div>
                     <div class="col-12">
                         <label for="brandClothes" class="form-label">Marca</label>
-                        <input type="text" class="form-control" name="brandClothes" id="brandClothes" placeholder="Adidas, Nike, Supreme, etc">
+                        <input type="text" class="form-control" name="brandClothes" id="brandClothes" placeholder="Adidas, Nike, Supreme, etc" required>
                     </div>
                     <div class="col-md-6">
                         <label for="sizeClothes" class="form-label">Talle</label>
-                        <input type="text" class="form-control" name="sizeClothes" id="sizeClothes" placeholder="XS, M, L, X, XL, XXL, etc">
+                        <input type="text" class="form-control" name="sizeClothes" id="sizeClothes" placeholder="XS, M, L, X, XL, XXL, etc" required>
                     </div>
                     <div class="col-md-4">
                         <label for="priceClothes" class="form-label">Precio</label>
-                        <input type="text" class="form-control" name="priceClothes" id="priceClothes" placeholder="$00,00">
+                        <input type="text" class="form-control" name="priceClothes" id="priceClothes" placeholder="$00,00" required>
                     </div>
                     <div class="col-md-4">
                         <label for="linkClothes" class="form-label">Link de pago</label>
-                        <input type="text" class="form-control linkpago" name="linkClothes" id="linkClothes" placeholder="https://mpago.la/">
+                        <input type="text" class="form-control linkpago" name="linkClothes" id="linkClothes" placeholder="https://mpago.la/" required>
                     </div>
                     <hr class="dropdown-divider">
                     <div class="mb-3">
