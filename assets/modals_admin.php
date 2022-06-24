@@ -46,6 +46,10 @@
                         <label for="priceClothes" class="form-label">Precio</label>
                         <input type="text" class="form-control" name="priceClothes" id="priceClothes" placeholder="$00,00">
                     </div>
+                    <div class="col-md-4">
+                        <label for="linkClothes" class="form-label">Link de pago</label>
+                        <input type="text" class="form-control linkpago" name="linkClothes" id="linkClothes" placeholder="https://mpago.la/">
+                    </div>
                     <hr class="dropdown-divider">
                     <div class="mb-3">
                         <label for="photo1" class="form-label">Imagen 1</label>
@@ -92,6 +96,10 @@
                     <div class="col-md-4">
                         <label for="priceClothes" class="form-label">Precio</label>
                         <input type="text" class="form-control" name="priceClothes" id="upd_priceClothes" placeholder="$00,00">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="linkPayClothes" class="form-label">Link de pago</label>
+                        <input type="text" class="form-control linkpago" name="linkPayClothes" id="upd_linkPayClothes" placeholder="https://mpago.la/">
                     </div>
                     <hr class="dropdown-divider">
                     <div class="mb-3">

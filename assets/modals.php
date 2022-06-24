@@ -1,13 +1,49 @@
-<div class="modal fade" role="dialog" tabindex="-1" id="modal-product">
-    <div class="modal-dialog modal-lg" role="document">
+<!-- Modal Product -->
+<div class="modal fade" id="modal-product" tabindex="-1" aria-labelledby="exampleModalLabelUpdate" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-body text-end" style="background: url(&quot;/assets/img/bkg-black.png?h=6bf9902f1539d91f036c0b4f759ab9cf&quot;);">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-start" data-reflow-type="product" data-bss-dynamic-product="" data-bss-dynamic-product-param="product" data-reflow-shoppingcart-url="cart.html"></div>
-                    </div>
-                </div><button class="btn btn-secondary text-end" type="button">Cancelar</button>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form action="pay.php" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input type="hidden" name="clothes_id" id="buy_clothes_id">
+                    <div class="col-12">
+                        <label for="buy_typeClothes" class="form-label">Tipo de prenda</label>
+                        <input type="text" class="form-control" name="buy_typeClothes" id="buy_typeClothes" readonly>
+                    </div>
+                    <div class="col-12">
+                        <label for="buy_brandClothes" class="form-label">Marca</label>
+                        <input type="text" class="form-control" name="buy_brandClothes" id="buy_brandClothes" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="buy_sizeClothes" class="form-label">Talle</label>
+                        <input type="text" class="form-control" name="buy_sizeClothes" id="buy_sizeClothes" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="buy_priceClothes" class="form-label">Precio</label>
+                        <input type="text" class="form-control" name="buy_priceClothes" id="buy_priceClothes" readonly>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="mb-3">
+                        <label for="buy_photo1" class="form-label">Imagen 1</label>
+                        <div class="imagenBuy">
+                            <img id="buy_img1" src='' alt='Producto' width="100" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="buy_photo2" class="form-label">Imagen 2</label>
+                        <div class="imagenBuy">
+                            <img id="buy_img2" src='' alt='Producto' width="100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" name="btn_cancel" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" name="update_clothes" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

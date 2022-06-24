@@ -10,22 +10,23 @@ if (isset($_POST['add_clothes'])) {
   $marca = $_POST['brandClothes'];
   $talle = $_POST['sizeClothes'];
   $precio = $_POST['priceClothes'];
+  $link = $_POST['linkClothes'];
   //verifico si sube 1 foto 2 o ninguna
   if ($_FILES['photo1']['name'] != null && $_FILES['photo2']['name'] != null) {
     $imagen1 = addslashes(file_get_contents($_FILES['photo1']['tmp_name']));
     $imagen2 = addslashes(file_get_contents($_FILES['photo2']['tmp_name']));
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2) VALUES ('','$tipo_prenda','$marca','$talle','$precio','$imagen1','$imagen2')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','$imagen1','$imagen2','$link')";
   } elseif ($_FILES['photo1']['name'] != null) {
     //verifico si se cargo la 1er imagen
     $imagen1 = addslashes(file_get_contents($_FILES['photo1']['tmp_name']));
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2) VALUES ('','$tipo_prenda','$marca','$talle','$precio','$imagen1','')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','$imagen1','','$link')";
   } elseif ($_FILES['photo2']['name'] != null) {
     //verifico si se cargo la 2da imagen
     $imagen2 = addslashes(file_get_contents($_FILES['photo2']['tmp_name']));
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2) VALUES ('','$tipo_prenda','$marca','$talle','$precio','','$imagen2')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','','$imagen2','$link')";
   } else {
     //creo la consulta para el caso que no se haya cargada ninguna imagen
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2) VALUES ('','$tipo_prenda','$marca','$talle','$precio','','')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','','','$link')";
   }
 
   //se ejecuta la consulta pero encerrandola dentro de un try catch por si ocurre algun error
@@ -48,29 +49,30 @@ if (isset($_POST['add_clothes'])) {
   unset($_POST['add_clothes']);
 }
 
-// ---------------- Modifica una nueva prenda ----------------
+// ---------------- Modifica una prenda ----------------
 if (isset($_POST['update_clothes'])) {
   $id3 = $_POST['clothes_id'];
   $tipo_prenda = $_POST['typeClothes'];
   $marca = $_POST['brandClothes'];
   $talle = $_POST['sizeClothes'];
   $precio = $_POST['priceClothes'];
+  $link = $_POST['linkPayClothes'];
   //verifico si las variables estan vacias, si es asi usuario no cargo ninguna foto
   if ($_FILES['upd_photo1']['name'] != null && $_FILES['upd_photo2']['name'] != null) {
     $imagen1 = addslashes(file_get_contents($_FILES['upd_photo1']['tmp_name']));
     $imagen2 = addslashes(file_get_contents($_FILES['upd_photo2']['tmp_name']));
-    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', imagen1='$imagen1', imagen2='$imagen2' WHERE id=$id3";
+    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', imagen1='$imagen1', imagen2='$imagen2', link_pago='$link' WHERE id=$id3";
   } elseif ($_FILES['upd_photo1']['name'] != null) {
     //verifico si se cargo la 1er imagen
     $imagen1 = addslashes(file_get_contents($_FILES['upd_photo1']['tmp_name']));
-    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', imagen1='$imagen1' WHERE id=$id3";
+    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', link_pago='$link', imagen1='$imagen1' WHERE id=$id3";
   } elseif ($_FILES['upd_photo2']['name'] != null) {
     //verifico si se cargo la 2da imagen
     $imagen2 = addslashes(file_get_contents($_FILES['upd_photo2']['tmp_name']));
-    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', imagen2='$imagen2' WHERE id=$id3";
+    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', link_pago='$link', imagen2='$imagen2' WHERE id=$id3";
   } else {
     //creo la consulta para el caso que no se haya cargada ninguna imagen
-    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio' WHERE id=$id3";
+    $queryUpdate = "UPDATE ropa SET tipo_de_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', link_pago='$link' WHERE id=$id3";
   }
   //se ejecuta la consulta pero encerrandola dentro de un try catch por si ocurre algun error
   try {

@@ -172,19 +172,8 @@ div.dropdown.btn.selectoption {
     font-size: 0.80rem!important;
 }
 
-.btn-outline-secondary:hover {
-    color: rgb(255, 255, 255) !important;
-    border-color: transparent;
-}
-
 .btn-outline-secondary:active{
     border-color: #C2DBFE;
-}
-
-.btn-outline-secondary {
-    border: 1px solid #ced4da;
-    color: #6c757d !important;
-    width: 125px;
 }
 
 .table{
@@ -193,4 +182,23 @@ div.dropdown.btn.selectoption {
 .logout:hover{
     background-color: red!important;
     color: white;
+}
+.btn-warning {
+    align-self: center!important;
+    color: #fff!important;
+    border-color: #adb5bd!important;
+    background-color: #1e212500;
+}
+.btn-warning:hover {
+    align-self: center!important;
+    color: #fff!important;
+    border-color: #51B8B1!important;
+    background-color:#51B8B1!important;
+}
+.modal-footer > .btn-outline-secondary{
+    color: #434a52;
+}
+
+.linkpago {
+    width: 20vh;
 }

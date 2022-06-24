@@ -18,7 +18,7 @@
                     <!-- <li class="nav-item"><a class="nav-link active" href="index.php" data-bs-target="#modal-login" data-bs-toggle="modal">Admin</a></li> -->
                     <li class="nav-item"><a class="nav-link active" href="./products.php">Admin</a></li>
                     <li class="nav-item"><a class="nav-link active" href="../index.php">Products</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="index.php">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="index.php">Cart</a></li>
                     <li class="nav-item"><a class="nav-link active logout" href="./logout.php">Logout</a></li>
                 </ul>
             </div>

@@ -72,6 +72,7 @@ include_once('./header_admin.php');
                         <td class="marca"><?php echo ucwords($reg['marca']); ?></td>
                         <td class="talle"><?php echo strtoupper($reg['talle']); ?></td>
                         <td class="precio"><?php echo $reg['precio']; ?></td>
+                        <td class="link" style="display: none;"><?php echo $reg['link_pago']; ?></td>
                         <td class="imagen1"><img id="imagen_re1" src="data:image/png;base64, <?php echo base64_encode($reg['imagen1']) ?>" alt="" width="85px" height="85px"></td>
                         <td class="imagen2"><img src="data:image/png;base64, <?php echo base64_encode($reg['imagen2']) ?>" alt="" width="85px" height="85px"></td>
                         <td><a href="#" class="btn delete_btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">Borrar</a></td>

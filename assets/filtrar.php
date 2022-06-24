@@ -17,7 +17,7 @@
             <!-- Carrousel -->
             <div id="slide<?php echo $reg["id"] ?>" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <!-- Se agrega link descripcion de producto-->
-                <a href="index.php" data-bs-target="#modal-product" data-bs-toggle="modal" class="product-link">
+                <!-- <a href="index.php" data-bs-target="#modal-product" data-bs-toggle="modal" class="product-link"> -->
                     <div class="carousel-inner">
                         <div class="carousel-item active" width="30px" height="30px">
                             <img class="card-img-top" src="data:image/jpg;base64, <?php echo base64_encode($reg["imagen1"]) ?>" alt="" )>
@@ -26,7 +26,7 @@
                             <img class="card-img-top" src="data:image/jpg;base64, <?php echo base64_encode($reg['imagen2']) ?>" alt="" )>
                         </div>
                     </div>
-                </a>
+                <!-- </a> -->
                 <!-- Botones de control del carrusel / no debe tener link del producto-->
                 <button class="carousel-control-prev" type="button" data-bs-target="#slide<?php echo $reg["id"] ?>" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -38,10 +38,11 @@
                 </button>
             </div>
             <!-- Se agrega link descripcion de producto-->
-            <a href="index.php" data-bs-target="#modal-product" data-bs-toggle="modal" class="product-link">
+            <!-- <a href="index.php" data-bs-target="#modal-product" data-bs-toggle="modal" class="product-link"> -->
                 <h3 class="card-title pt-3" style="width: 100%; font-size:25px;"><?php echo ucwords($reg['marca']) ?></h3>
                 <span>$ <?php echo $reg['precio']; ?></span>
-            </a>
+            <!-- </a> -->
+            <a href="<?php echo ucwords($reg['link_pago']) ?>" target="_blank" type="button" class="btn btn-warning">Comprar</a>
         </div>
     <?php } ?>
 </div>
