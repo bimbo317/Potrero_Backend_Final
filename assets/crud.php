@@ -15,18 +15,18 @@ if (isset($_POST['add_clothes'])) {
   if ($_FILES['photo1']['name'] != null && $_FILES['photo2']['name'] != null) {
     $imagen1 = addslashes(file_get_contents($_FILES['photo1']['tmp_name']));
     $imagen2 = addslashes(file_get_contents($_FILES['photo2']['tmp_name']));
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','$imagen1','$imagen2','$link')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES (null,'$tipo_prenda','$marca','$talle','$precio','$imagen1','$imagen2','$link')";
   } elseif ($_FILES['photo1']['name'] != null) {
     //verifico si se cargo la 1er imagen
     $imagen1 = addslashes(file_get_contents($_FILES['photo1']['tmp_name']));
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','$imagen1','','$link')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,link_pago) VALUES (null,'$tipo_prenda','$marca','$talle','$precio','$imagen1','$link')";
   } elseif ($_FILES['photo2']['name'] != null) {
     //verifico si se cargo la 2da imagen
     $imagen2 = addslashes(file_get_contents($_FILES['photo2']['tmp_name']));
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','','$imagen2','$link')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen2,link_pago) VALUES (null,'$tipo_prenda','$marca','$talle','$precio','$imagen2','$link')";
   } else {
     //creo la consulta para el caso que no se haya cargada ninguna imagen
-    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,imagen1,imagen2,link_pago) VALUES ('','$tipo_prenda','$marca','$talle','$precio','','','$link')";
+    $queryInsert = "INSERT INTO ropa (id,tipo_de_prenda,marca,talle,precio,link_pago) VALUES (null,'$tipo_prenda','$marca','$talle','$precio','$link')";
   }
 
   //se ejecuta la consulta pero encerrandola dentro de un try catch por si ocurre algun error
